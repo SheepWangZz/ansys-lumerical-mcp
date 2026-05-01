@@ -1,0 +1,8 @@
+name: ansys-lumerical-mcp
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10,<4
+  - pip
+  - pip:
+      - -e .

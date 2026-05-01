@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "ansys-lumerical": {
+      "command": "ansys-lumerical-mcp"
+    }
+  }
+}
