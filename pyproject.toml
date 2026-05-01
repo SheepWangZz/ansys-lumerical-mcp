@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ansys-lumerical-mcp"
+version = "0.1.0"
+description = "MCP server for Ansys Lumerical automation"
+readme = "README.md"
+requires-python = ">=3.10,<4"
+license = { text = "MIT" }
+authors = [
+  { name = "Ansys Lumerical MCP contributors" }
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+  "ansys-lumerical-core>=0.2.0",
+  "mcp>=1.27.0"
+]
+
+[project.optional-dependencies]
+tests = [
+  "pytest"
+]
+build = [
+  "build"
+]
+
+[project.scripts]
+ansys-lumerical-mcp = "ansys_lumerical_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ansys_lumerical_mcp"]
